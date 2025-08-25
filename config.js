@@ -10,5 +10,4 @@ module.exports = {
     'umts/round-three',
   ],
   repositoryCache: 'enabled',
-  dryRun: 'full',
 }
