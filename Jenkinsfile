@@ -1,5 +1,6 @@
 pipeline {
   agent any
+
   parameters {
     string(name: 'RENOVATE_ARGS', defaultValue: '', description: 'Optional additional arguments to pass to renovate', trim: true)
   }
@@ -9,6 +10,11 @@ pipeline {
     timeout(time: 1, unit: 'HOURS')
     buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: ''))
     ansiColor('xterm')
+  }
+
+  triggers {
+    githubPush()
+    cron('H H * * *')
   }
 
   stages {
