@@ -2,7 +2,8 @@ pipeline {
   agent any
 
   parameters {
-    string(name: 'RENOVATE_ARGS', defaultValue: '', description: 'Optional additional arguments to pass to renovate', trim: true)
+    string(name: 'RENOVATE_ARGS', defaultValue: '', trim: true,
+           description: 'Optional additional arguments to pass to renovate')
   }
 
   options {
@@ -39,7 +40,9 @@ pipeline {
         LOG_LEVEL = 'debug'
       }
       steps {
-        withCredentials([usernamePassword(credentialsId: 'umts-renovate-app-key', usernameVariable: 'GITHUB_APP', passwordVariable: 'RENOVATE_TOKEN')]) {
+        withCredentials([usernamePassword(credentialsId: 'umts-renovate-app-key',
+                         usernameVariable: 'GITHUB_APP',
+                         passwordVariable: 'RENOVATE_TOKEN')]) {
           sh "renovate ${params.RENOVATE_ARGS}"
         }
       }
