@@ -2,6 +2,13 @@ PreCommit:
   ForbiddenBranches:
     enabled: true
     branch_patterns: ["master", "main"]
+  Groovylint:
+    enabled: true
+    required_executable: "npx"
+    command: ["npx", "npm-groovy-lint"]
+    include: ["Jenkinsfile"]
+  JsonSyntax:
+    enabled: true
 CommitMsg:
   ALL:
     enabled: false
