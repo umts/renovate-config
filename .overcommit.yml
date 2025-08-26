@@ -1,0 +1,7 @@
+PreCommit:
+  ForbiddenBranches:
+    enabled: true
+    branch_patterns: ["master", "main"]
+CommitMsg:
+  ALL:
+    enabled: false
