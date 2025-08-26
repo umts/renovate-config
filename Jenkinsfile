@@ -31,8 +31,9 @@ pipeline {
           image 'renovate/renovate:41.82'
           reuseNode true
           args """
-            --volume="${env.WORKSPACE}/config.js:/usr/src/app/config.js"
+            --mount type=tmpfs,target=/tmp
             --volume="${env.WORKSPACE}/.renovate-tmp:/tmp/renovate" 
+            --volume="${env.WORKSPACE}/config.js:/usr/src/app/config.js"
           """
         }
       }
