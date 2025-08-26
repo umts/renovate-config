@@ -5,14 +5,14 @@
   "packageRules": [
     {
       "matchManagers": ["bundler", "ruby-version"],
-      "labels": ["ruby"]
+      "addLabels": ["ruby"]
     },
     {
       "matchManagers": ["npm", "nodenv"],
-      "labels": ["javascript"]
+      "addLabels": ["javascript"]
     },
     {
-      "matchManagers": ["ruby-version", "nodenev"],
+      "matchManagers": ["ruby-version", "nodenv"],
       "dependencyDashboardApproval": true
     },
     {
