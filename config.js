@@ -2,7 +2,7 @@ module.exports = {
   onboardingConfig: {
     extends: [
       'config:recommended',
-      'github>umts/renovate-config',
+      'github>umts/renovate-config:base',
     ]
   },
   platform: 'github',
