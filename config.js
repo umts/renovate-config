@@ -9,6 +9,7 @@ module.exports = {
   platform: 'github',
   repositories: [
     'umts/round-three',
+    'umts/umaps-rails',
   ],
   repositoryCache: 'enabled',
 }
