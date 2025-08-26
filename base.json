@@ -1,7 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "labels": ["dependencies"],
   "prConcurrentLimit": 5,
   "packageRules": [
+    {
+      "matchManagers": ["bundler", "ruby-version"],
+      "labels": ["ruby"]
+    },
+    {
+      "matchManagers": ["npm", "nodenv"],
+      "labels": ["javascript"]
+    },
     {
       "matchManagers": ["ruby-version", "nodenev"],
       "dependencyDashboardApproval": true
