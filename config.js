@@ -5,6 +5,7 @@ module.exports = {
       'github>umts/renovate-config:base',
     ]
   },
+  onboardingRebaseCheckbox: true,
   platform: 'github',
   repositories: [
     'umts/round-three',
