@@ -27,11 +27,9 @@ pipeline {
 
     stage('Renovate') {
       agent {
-        docker {
-          image 'renovate/renovate:41.82'
+        dockerfile {
           reuseNode true
           args """
-            --user=root:root
             --volume="${env.WORKSPACE}/.renovate-tmp:/tmp/renovate"
             --volume="${env.WORKSPACE}/config.js:/usr/src/app/config.js"
           """
