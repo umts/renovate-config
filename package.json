@@ -3,6 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "npm-groovy-lint": "^15.2.1"
+    "npm-groovy-lint": "^15.2.2"
   }
 }
