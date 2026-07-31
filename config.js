@@ -8,6 +8,7 @@ module.exports = {
   onboardingRebaseCheckbox: true,
   platform: 'github',
   repositories: [
+    'umts/gtfs-react-hooks',
     'umts/round-three',
     'umts/umaps-rails',
   ],
