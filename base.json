@@ -12,10 +12,6 @@
       "addLabels": ["javascript"]
     },
     {
-      "matchManagers": ["ruby-version", "nodenv"],
-      "dependencyDashboardApproval": true
-    },
-    {
       "matchDepNames": ["rails"],
       "matchUpdateTypes": ["major", "minor"],
       "dependencyDashboardApproval": true
