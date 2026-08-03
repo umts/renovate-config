@@ -26,3 +26,12 @@ jobs:
         with:
           node-version: 'lts/*'
       - run: "node -e \"JSON.parse(require('fs').readFileSync('base.json'));\""
+  renovate-config-validator:
+    name: Renovate Config Validator
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 'lts/*'
+      - run: npx --package renovate renovate-config-validator base.json
