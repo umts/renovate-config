@@ -4,6 +4,12 @@
   "prConcurrentLimit": 5,
   "packageRules": [
     {
+      "extends": [
+        "group:stylelint",
+        "group:vite"
+      ]
+    },
+    {
       "matchManagers": ["bundler", "ruby-version"],
       "addLabels": ["ruby"]
     },
@@ -15,30 +21,6 @@
       "matchDepNames": ["rails"],
       "matchUpdateTypes": ["major", "minor"],
       "dependencyDashboardApproval": true
-    },
-    {
-      "groupName": "datatables.net",
-      "matchPackageNames": ["datatables.net*"]
-    },
-    {
-      "groupName": "fullcalendar",
-      "matchPackageNames": ["@fullcalendar/*", "fullcalendar"]
-    },
-    {
-      "groupName": "react",
-      "matchPackageNames": ["react", "react-dom"]
-    },
-    {
-      "groupName": "stylelint",
-      "matchPackageNames": ["stylelint*"]
-    },
-    {
-      "groupName": "vite",
-      "matchPackageNames": ["@vitejs/*", "vite"]
-    },
-    {
-      "groupName": "vitest",
-      "matchPackageNames": ["@vitest/*", "@testing-library/*", "vitest*"]
     }
   ]
 }
