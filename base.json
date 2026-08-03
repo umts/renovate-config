@@ -2,13 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "labels": ["dependencies"],
   "prConcurrentLimit": 5,
+  "extends": [
+    "config:recommended",
+    "group:stylelint",
+    "group:vite"
+  ],
   "packageRules": [
-    {
-      "extends": [
-        "group:stylelint",
-        "group:vite"
-      ]
-    },
     {
       "matchManagers": ["bundler", "ruby-version"],
       "addLabels": ["ruby"]
