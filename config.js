@@ -13,6 +13,7 @@ module.exports = {
     'umts/gtfs_cache',
     'umts/gtfs-react-hooks',
     'umts/public-message-board',
+    'umts/renovate-config',
     'umts/round-three',
     'umts/umaps-rails',
   ],
