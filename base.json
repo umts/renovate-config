@@ -3,7 +3,8 @@
   "labels": ["dependencies"],
   "prConcurrentLimit": 5,
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    "docker:pinDigests"
   ],
   "packageRules": [
     {
