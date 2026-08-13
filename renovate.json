@@ -7,7 +7,9 @@
     {
       "groupName": "renovate",
       "matchDatasources": ["npm", "docker"],
-      "matchPackagePatterns": ["renovate"]
+      "matchPackageNames": [
+        "/renovate/"
+      ]
     }
   ]
 }
