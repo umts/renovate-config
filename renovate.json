@@ -2,5 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>umts/renovate-config:base"
+  ],
+  "packageRules": [
+    {
+      "groupName": "renovate",
+      "matchDatasources": ["npm", "docker"],
+      "matchPackages": ["renovate", "renovate/renovate"]
+    }
   ]
 }
