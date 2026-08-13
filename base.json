@@ -4,6 +4,7 @@
   "prConcurrentLimit": 5,
   "extends": [
     "config:recommended",
+    "docker:pinDigests",
     "group:stylelint",
     "group:vite"
   ],
