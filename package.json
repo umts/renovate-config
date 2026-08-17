@@ -9,6 +9,6 @@
   "allowScripts": {
     "core-js-pure": false,
     "dtrace-provider": false,
-    "re2": false
+    "re2@1.26.1": true
   }
 }
