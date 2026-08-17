@@ -18,16 +18,6 @@ jobs:
           node-version-file: .node-version
           cache: npm
       - run: npx npm-groovy-lint Jenkinsfile
-  json-lint:
-    name: JSON Parse
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
-        with:
-          node-version-file: .node-version
-          cache: npm
-      - run: "node -e \"JSON.parse(require('fs').readFileSync('base.json'));\""
   renovate-config-validator:
     name: Renovate Config Validator
     runs-on: ubuntu-latest
