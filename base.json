@@ -10,14 +10,6 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["ruby-version"],
-      "postUpgradeTasks": {
-        "commands": ["bundle lock --conservative"],
-        "fileFilters": ["Gemfile.lock"],
-        "executionMode": "branch"
-      }
-    },
-    {
       "matchManagers": ["bundler", "ruby-version"],
       "addLabels": ["ruby"]
     },
