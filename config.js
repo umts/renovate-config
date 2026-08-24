@@ -18,4 +18,7 @@ module.exports = {
     'umts/umaps-rails',
   ],
   repositoryCache: 'enabled',
+  allowedCommands: [
+    "^bundle lock",
+  ],
 }
