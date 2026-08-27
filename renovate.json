@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>umts/renovate-config:base"
+    "local>umts/renovate-config"
   ],
   "packageRules": [
     {
