@@ -13,6 +13,7 @@ module.exports = {
     'umts/renovate-config',
     'umts/round-three',
     'umts/screaming-dinosaur',
+    'umts/shared-workflows',
     'umts/stop-project',
     'umts/umaps-rails',
     'umts/umasstransit.rodeo',
