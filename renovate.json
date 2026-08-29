@@ -7,9 +7,16 @@
     {
       "groupName": "renovate",
       "matchDatasources": ["npm", "docker"],
-      "matchPackageNames": [
-        "/renovate/"
-      ]
+      "matchPackageNames": ["/renovate/"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "automerge": true
+    },
+    {
+      "groupName": "renovate (major)",
+      "matchDatasources": ["npm", "docker"],
+      "matchPackageNames": ["/renovate/"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
     }
   ]
 }
