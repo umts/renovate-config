@@ -3,7 +3,7 @@ UMass Transortation Renovate Config
 
 This repository contains the [Renovate][renovate] configuration for UMass
 Transportation, which we run on our [Jenkins][jenkins] install,
-<https://jenkins.umass.edu/>. There are just three configuration files:
+<https://jenkins.umass.edu/>. There are just four configuration files:
 
 - `Jenkinsfile`: Defines the Jenkins pipeline, it requires a GitHub app
   credential to be set up in Jenkins. See Renovate's
@@ -16,9 +16,12 @@ Transportation, which we run on our [Jenkins][jenkins] install,
 - `config.js`: The [self-hosted configuration file][renovate-config] for
   Renovate.  This defines _how_ Renovate runs.
 
-- `base.json`: The [base preset][renovate-presets] for UMass
+- `default.json`: The [base preset][renovate-presets] for UMass
   Transportation. This defines _what_ Renovate does and will be included in the
   onboarding PRs for new repositories.
+
+- `renovate.json`: Renovate runs on this repository among others, updating
+  itself. This configuration defines the settings for that.
 
 [renovate]: https://github.com/renovatebot/renovate
 [jenkins]: https://www.jenkins.io/
