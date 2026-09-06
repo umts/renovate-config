@@ -1,4 +1,4 @@
-name: lint
+name: integrate
 on:
   push:
     branches:
@@ -6,7 +6,6 @@ on:
   pull_request:
     branches:
       - main
-
 jobs:
   groovy-lint:
     runs-on: ubuntu-latest
