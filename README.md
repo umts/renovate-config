@@ -14,7 +14,7 @@ Transportation, which we run on our [Jenkins][jenkins] install,
   used to add command-line arguments to manually-triggered runs.
 
 - `config.js`: The [self-hosted configuration file][renovate-config] for
-  Renovate.  This defines _how_ Renovate runs.
+  Renovate. This defines _how_ Renovate runs.
 
 - `default.json`: The [base preset][renovate-presets] for UMass
   Transportation. This defines _what_ Renovate does and will be included in the

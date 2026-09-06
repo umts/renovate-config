@@ -2,12 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "labels": ["dependencies"],
   "prConcurrentLimit": 5,
-  "extends": [
-    "config:recommended",
-    "docker:pinDigests",
-    "group:stylelint",
-    "group:vite"
-  ],
+  "extends": ["config:recommended", "docker:pinDigests", "group:stylelint", "group:vite"],
   "packageRules": [
     {
       "matchManagers": ["bundler", "ruby-version"],

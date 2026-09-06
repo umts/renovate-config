@@ -28,3 +28,13 @@ jobs:
           node-version-file: .node-version
           cache: npm
       - run: npx --package renovate renovate-config-validator config.js default.json
+  oxfmt:
+    name: OxFmt
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npx oxfmt --check
