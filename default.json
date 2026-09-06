@@ -14,10 +14,12 @@
     },
     {
       "matchDepNames": ["mariadb"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
       "dependencyDashboardApproval": true
     },
     {
       "matchDepNames": ["mysql"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
       "dependencyDashboardApproval": true
     },
     {
