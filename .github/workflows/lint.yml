@@ -17,6 +17,7 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
+      - run: npm ci
       - run: npx npm-groovy-lint Jenkinsfile
   renovate-config-validator:
     name: Renovate Config Validator
@@ -27,6 +28,7 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
+      - run: npm ci
       - run: npx --package renovate renovate-config-validator config.js default.json
   oxfmt:
     name: OxFmt
@@ -37,4 +39,5 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
+      - run: npm ci
       - run: npx oxfmt --check
