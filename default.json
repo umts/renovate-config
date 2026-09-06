@@ -21,6 +21,11 @@
       "matchDepNames": ["rails"],
       "matchUpdateTypes": ["major", "minor"],
       "dependencyDashboardApproval": true
+    },
+    {
+      "matchDepNames": ["ruby"],
+      "matchUpdateTypes": ["major", "minor"],
+      "dependencyDashboardApproval": true
     }
   ]
 }
