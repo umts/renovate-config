@@ -18,6 +18,14 @@
       "addLabels": ["javascript"]
     },
     {
+      "matchDepNames": ["mariadb"],
+      "dependencyDashboardApproval": true
+    },
+    {
+      "matchDepNames": ["mysql"],
+      "dependencyDashboardApproval": true
+    },
+    {
       "matchDepNames": ["rails"],
       "matchUpdateTypes": ["major", "minor"],
       "dependencyDashboardApproval": true
