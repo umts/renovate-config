@@ -2,12 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "labels": ["dependencies"],
   "prConcurrentLimit": 5,
-  "extends": [
-    "config:recommended",
-    "docker:pinDigests",
-    "group:stylelint",
-    "group:vite"
-  ],
+  "extends": ["config:recommended", "docker:pinDigests", "group:stylelint", "group:vite"],
   "packageRules": [
     {
       "matchManagers": ["bundler", "ruby-version"],
@@ -18,7 +13,22 @@
       "addLabels": ["javascript"]
     },
     {
+      "matchDepNames": ["mariadb"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "dependencyDashboardApproval": true
+    },
+    {
+      "matchDepNames": ["mysql"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "dependencyDashboardApproval": true
+    },
+    {
       "matchDepNames": ["rails"],
+      "matchUpdateTypes": ["major", "minor"],
+      "dependencyDashboardApproval": true
+    },
+    {
+      "matchDepNames": ["ruby"],
       "matchUpdateTypes": ["major", "minor"],
       "dependencyDashboardApproval": true
     }
