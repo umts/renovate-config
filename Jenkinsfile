@@ -50,4 +50,12 @@ pipeline {
       }
     }
   }
+
+  post {
+    success {
+      mail to: 'mmoretti@umass.edu',
+           subject: "TEST run succeeded (${env.JOB_NAME})",
+           body: "Build Successful ${env.JOB_NAME} build no: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}"
+    }
+  }
 }
