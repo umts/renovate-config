@@ -15,7 +15,6 @@ pipeline {
 
   triggers {
     githubPush()
-    cron('H/20 * * * *')
   }
 
   stages {
@@ -25,26 +24,29 @@ pipeline {
       }
     }
 
-    stage('Renovate') {
-      agent {
-        dockerfile {
-          reuseNode true
-          args """
-            --user=root:root
-            --volume="${env.WORKSPACE}/.renovate-tmp:/tmp/renovate"
-            --volume="${env.WORKSPACE}/config.js:/usr/src/app/config.js"
-          """
-        }
-      }
-      environment {
-        LOG_LEVEL = 'debug'
-      }
+    stage('Inspect') {
       steps {
-        withCredentials([usernamePassword(credentialsId: 'umts-renovate-app-key',
-                         usernameVariable: 'GITHUB_APP',
-                         passwordVariable: 'RENOVATE_TOKEN')]) {
-          sh "renovate ${params.RENOVATE_ARGS}"
-        }
+        sh '''
+          echo "=== Top level ==="
+          du -h -d 1 .renovate-tmp 2>/dev/null | sort -h
+
+          echo
+          echo "=== Cache ==="
+          du -h -d 2 .renovate-tmp/cache 2>/dev/null | sort -h | tail -50
+
+          echo
+          echo "=== Repos ==="
+          du -h -d 2 .renovate-tmp/repos 2>/dev/null | sort -h | tail -50
+
+          echo
+          echo "=== File counts ==="
+          printf 'Total: '
+          find .renovate-tmp -type f | wc -l
+          printf 'Cache: '
+          find .renovate-tmp/cache -type f 2>/dev/null | wc -l
+          printf 'Repos: '
+          find .renovate-tmp/repos -type f 2>/dev/null | wc -l
+        '''
       }
     }
   }
