@@ -31,6 +31,12 @@
       "matchDepNames": ["ruby"],
       "matchUpdateTypes": ["major", "minor"],
       "dependencyDashboardApproval": true
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchDepNames": ["umts/shared-workflows"],
+      "digest": { "enabled": true },
+      "pinDigests": true
     }
   ]
 }
