@@ -2,7 +2,13 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "labels": ["dependencies"],
   "prConcurrentLimit": 5,
-  "extends": ["config:recommended", "docker:pinDigests", "group:stylelint", "group:vite"],
+  "extends": [
+    "config:recommended",
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests",
+    "group:stylelint",
+    "group:vite"
+  ],
   "packageRules": [
     {
       "matchManagers": ["bundler", "ruby-version"],
@@ -31,12 +37,6 @@
       "matchDepNames": ["ruby"],
       "matchUpdateTypes": ["major", "minor"],
       "dependencyDashboardApproval": true
-    },
-    {
-      "matchManagers": ["github-actions"],
-      "matchDepNames": ["umts/shared-workflows"],
-      "digest": { "enabled": true },
-      "pinDigests": true
     }
   ]
 }
