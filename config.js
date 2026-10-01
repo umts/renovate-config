@@ -2,6 +2,7 @@ export default {
   onboardingRebaseCheckbox: true,
   platform: "github",
   repositories: [
+    "umts/brand",
     "umts/departure-board",
     "umts/dev-training-web",
     "umts/fleetfocus-api",
