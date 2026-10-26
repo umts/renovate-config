@@ -9,6 +9,10 @@ PreCommit:
     include: ["Jenkinsfile"]
   JsonSyntax:
     enabled: true
+  OxFmt:
+    enabled: true
+    required_executable: "npx"
+    command: ["npx", "oxfmt"]
 CommitMsg:
   ALL:
     enabled: false

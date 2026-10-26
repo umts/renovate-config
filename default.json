@@ -5,6 +5,7 @@
   "extends": [
     "config:recommended",
     "docker:pinDigests",
+    "helpers:pinGitHubActionDigests",
     "group:stylelint",
     "group:vite"
   ],
@@ -18,7 +19,22 @@
       "addLabels": ["javascript"]
     },
     {
+      "matchDepNames": ["mariadb"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "dependencyDashboardApproval": true
+    },
+    {
+      "matchDepNames": ["mysql"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "dependencyDashboardApproval": true
+    },
+    {
       "matchDepNames": ["rails"],
+      "matchUpdateTypes": ["major", "minor"],
+      "dependencyDashboardApproval": true
+    },
+    {
+      "matchDepNames": ["ruby"],
       "matchUpdateTypes": ["major", "minor"],
       "dependencyDashboardApproval": true
     }

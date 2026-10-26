@@ -48,4 +48,12 @@ pipeline {
       }
     }
   }
+
+  post {
+    failure {
+      mail to: 'transit-it@admin.umass.edu',
+           subject: "Jenkins run failed (${env.JOB_NAME})",
+           body: "Build Failed ${env.JOB_NAME} build no: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}"
+    }
+  }
 }

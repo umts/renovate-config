@@ -1,9 +1,9 @@
 {
-  "name": "renovate-config",
-  "version": "0.0.1",
   "private": true,
+  "type": "module",
   "devDependencies": {
     "npm-groovy-lint": "*",
+    "oxfmt": "*",
     "renovate": "*"
   },
   "allowScripts": {
