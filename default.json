@@ -37,6 +37,11 @@
       "matchDepNames": ["ruby"],
       "matchUpdateTypes": ["major", "minor"],
       "dependencyDashboardApproval": true
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["fullcalendar"],
+      "groupName": "fullcalendar monorepo"
     }
   ]
 }
